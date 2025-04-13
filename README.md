@@ -1,5 +1,7 @@
 # Projeto Multithread - MC504A 1S2025
-<img src="decoracao_fila.jpg" alt="Desenho de pessoas na fila de um banheiro">
+<img src="decoracao_fila.jpg" alt="Desenho de pessoas na fila de um banheiro" height="350">
+Fonte: <a href="https://pt.vecteezy.com/">Vectreezy.com</a>
+
 ## Sobre
 Primeiro projeto realizado para a disciplina de Sistemas Operacionais, turma A, Prof. Islene Calciolari Garcia. O projeto busca implementar uma solução, utilizando semáforos, mutex e variáveis de condição para o <b>Problema do Banheiro Unissex</b>, apresentado na Seção 6.2 do livro The Little Book of Semaphores, de Allen Downey.
 ## Integrantes
