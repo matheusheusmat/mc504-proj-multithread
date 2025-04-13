@@ -5,7 +5,8 @@
 </figure>
 
 ## Sobre
-Primeiro projeto realizado para a disciplina de Sistemas Operacionais, turma A, Prof. Islene Calciolari Garcia. O projeto busca implementar uma solução, utilizando semáforos, mutex e variáveis de condição para o <b>Problema do Banheiro Unissex</b>, apresentado na Seção 6.2 do livro The Little Book of Semaphores, de Allen Downey.
+Primeiro projeto realizado para a disciplina de Sistemas Operacionais, turma A, Prof. Islene Calciolari Garcia. O projeto busca implementar uma solução, utilizando semáforos, mutex e variáveis de condição para o <b>Problema do Banheiro Unissex</b>, apresentado na Seção 6.2 do livro <a href="https://greenteapress.com/wp/semaphores/">The Little Book of Semaphores</a>, de Allen Downey.
+
 ## Integrantes
 <ul>
   <li>João Takaki - 260545</li>
@@ -13,5 +14,7 @@ Primeiro projeto realizado para a disciplina de Sistemas Operacionais, turma A, 
   <li>Lucca Amodio - 239062</li>
   <li>Matheus Ponte - 247277</li>
 </ul>
+
+## O problema
 
 ## Link do vídeo de apresentação
