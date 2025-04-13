@@ -1,5 +1,5 @@
 # Projeto Multithread - MC504A 1S2025
-<img src="decoracao_fila.jpg" alt="Desenho de pessoas na fila de um banheiro" height="350">
+<img src="decoracao_fila.jpg" alt="Desenho de pessoas na fila de um banheiro">
 Fonte: <a href="https://pt.vecteezy.com/">Vectreezy.com</a>
 
 ## Sobre
