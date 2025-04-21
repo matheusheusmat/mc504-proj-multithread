@@ -287,14 +287,18 @@ void processar_troca()
         }
 
         // Se banheiro esvaziou, conclui a troca
-        if (bloqueio_entrada && banheiro_ocupado == 0)
+        if (banheiro_ocupado == 0)
         {
             Sexo novo_sexo = (sexo_atual == MALE) ? FEMALE : MALE;
             sexo_atual = novo_sexo;
             tempo_troca_ativo = 0;
+            if (bloqueio_entrada) {
+                printf(">> TROCA FORÇADA CONCLUÍDA! Banheiro agora é %s <<\n", sexo_str[novo_sexo]);
+            }
+            else {
+                printf(">> TROCA NATURAL CONCLUÍDA! Banheiro agora é %s <<\n", sexo_str[novo_sexo]);
+            }
             bloqueio_entrada = 0;
-
-            printf(">> TROCA CONCLUÍDA! Banheiro agora é %s <<\n", sexo_str[novo_sexo]);
             sem_wait(&sem_estados);
             imprimeVisualizacao();
             sem_post(&sem_estados);
