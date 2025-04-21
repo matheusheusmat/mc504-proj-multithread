@@ -16,5 +16,25 @@ Primeiro projeto realizado para a disciplina de Sistemas Operacionais, turma A, 
 </ul>
 
 ## O problema
+Downey introduz o problema contando uma breve história sobre uma amiga que trabalhava em um andar de uma grande empresa. Porém, nesse andar só havia um banheiro masculino, com o feminino mais próximo ficando dois andares acima. A funcionária, então, sugeriu ao seu chefe que convertesse o banheiro em unissex, para que atendesse ambos os gêneros. O chefe concordou, porém adicionou as seguintes regras:
+<ul>
+  <li>Não pode haver mulheres e homens no banheiro ao mesmo tempo; e</li>
+  <li>Não pode haver mais de três empregados no banheiro ao mesmo tempo.</li>
+</ul>
+
+## A solução
+O problema pode ser tratado, computacionalmente, como um <b>problema de sincronização multithread</b>, em que cada thread representa uma pessoa que precisa utilizar um recurso, no caso, um banheiro, porém com as restrições apresentadas anteriormente.
+
+A solução baseou-se no princípio que, quando a primeira pessoa entra no banheiro, ele torna-se exclusivo para aquele gênero, podendo aceitar apenas pessoas do mesmo. Após um tempo definido (que foi escolhido como 3 segundos), um cronômetro inicia e pessoas do mesmo gênero ainda podem adentrar, caso haja vaga. Ao zerar o cronômetro, a entrada é bloqueada e aguarda-se a saída de todas as pessoas que estão no banheiro. Então, o banheiro torna-se exclusivo para o outro sexo, e o ciclo reinicia-se. Dessa forma, garante-se que todas as threads sejam atendidas, evitando starvation.
+
+Três variáveis controlam o acesso ao banheiro e a impressão dos estados: 
+<ul>
+  <li><code>mtx</code> (mutex): protege o acesso concorrente a variáveis compartilhadas, como <code>banheiro_ocupado</code>, <code>sexo_atual</code>, o array <code>banheiro</code>, entre outras, garantindo que apenas uma thread por vez possa modificar esses estados compartilhados.</li>
+  <li><code>sexo_atual</code>: variável de condição que controla qual tipo de thread (homem ou mulher) pode entrar no banheiro no momento.
+  <li><code>sem_estados</code> (semáforo): usado em torno das chamadas da função de impressão de visualização do estado do banheiro (<code>imprime_visualizacao()</code>), o que garante sua atomicidade e protege contra condições de corrida, evitando que a saída não fique embaralhada.</li>
+</ul>
+
+## Uso de LLMs 
+Usamos o Chat GPT como um "norteador" da solução, isto é, como um assistente para saber em que parte da solução deveríamos implementar o semáforo e o mutex, sem que isso seja codificado diretamente em C. Solicitamos um pseudocódigo para nos auxiliar, da seguinte maneira:
 
 ## Link do vídeo de apresentação
