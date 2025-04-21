@@ -371,7 +371,7 @@ void *pessoa(void *arg)
         //    b. Está em processo de troca mas o timeout ainda não expirou
         if (banheiro_ocupado < CAPACIDADE_BANHEIRO &&
             (sexo_atual == LIVRE ||
-             (sexo_atual == sexo && (!tempo_troca_ativo || !bloqueio_entrada))))
+             (sexo_atual == sexo && (!bloqueio_entrada))))
         {
 
             // Se banheiro estava vazio, define o sexo atual
