@@ -6,7 +6,7 @@
 #include <time.h>
 #include <semaphore.h>
 
-#define MAX_PESSOAS 20
+#define MAX_PESSOAS 15
 #define TROCA_SEXO_TIMEOUT 3
 #define CHECK_INTERVAL_US 100000
 #define CAPACIDADE_BANHEIRO 4
@@ -123,11 +123,17 @@ void imprimeVisualizacao()
     {
         if (banheiro[i] != -1)
         {
-            printf("|====|");
+            if (i != CAPACIDADE_BANHEIRO - 1)
+            printf("|=====");
+            else 
+            printf("|=====|");
         }
         else
         {
-            printf("|    |");
+            if (i != CAPACIDADE_BANHEIRO - 1)
+            printf("|     ");
+            else
+            printf("|     |");
         }
     }
 
@@ -166,11 +172,11 @@ void imprimeVisualizacao()
         }
         else
         {
-            printf("    |");
+            printf("     |");
         }
     }
 
-    printf("       "); // Espaço extra antes dos que estão saindo
+    printf("      "); // Espaço extra antes dos que estão saindo
 
     for (i = 0; i < qtosSaindo; i++)
     {
