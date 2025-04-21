@@ -35,6 +35,6 @@ Três variáveis controlam o acesso ao banheiro e a impressão dos estados:
 </ul>
 
 ## Uso de LLMs 
-Usamos o Chat GPT como um "norteador" da solução, isto é, como um assistente para saber em que parte da solução deveríamos implementar o semáforo e o mutex, sem que isso seja codificado diretamente em C. Solicitamos um pseudocódigo para nos auxiliar, da seguinte maneira:
+Usamos o Chat GPT como um "norteador" da solução, isto é, como um assistente para saber em que parte da solução deveríamos implementar o semáforo e o mutex, sem que isso seja codificado diretamente em C. Solicitamos um pseudocódigo para nos auxiliar, como pode ser conferido no <a href="https://chatgpt.com/share/68068b4c-6860-800f-ab4a-b935b1e87c76">chat compartilhado</a>.
 
 ## Link do vídeo de apresentação
