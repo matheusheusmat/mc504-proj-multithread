@@ -37,7 +37,7 @@ Três variáveis controlam o acesso ao banheiro e a impressão dos estados:
 Quando uma thread está dormindo, representa uma pessoa na fila esperando para entrar no banheiro. Quando a thread acorda, representa uma pessoa utilizando o banheiro. É importante notar que, quando uma thread termina sua execução, ou seja, uma pessoa deixou o banheiro, a mesma acorda a próxima thread que esteja na fila do mesmo gênero que o seu, indicando que é sua vez.
 
 ### Generalidade da solução
-As macros <code>MAX_PESSOAS</code>, <code>TROCA_SEXO_TIMEOUT</code> e <code>CAPACIDADE_BANHEIRO</code> podem ser livremente alteradas de modo a explorar a generalidade da solução, que não se limita a um determinado número de pessoas ou apenas 3 pessoas utilizando simultaneamente. Experimente!
+As macros <code>MAX_PESSOAS</code>, <code>TROCA_SEXO_TIMEOUT</code> e <code>CAPACIDADE_BANHEIRO</code> podem ser livremente alteradas de modo a explorar a generalidade da solução, que não se limita a um determinado total de pessoas ou apenas 3 pessoas utilizando o banheiro simultaneamente. Experimente!
 
 ## Uso de LLMs 
 Usamos o Chat GPT como um "norteador" da solução, isto é, como um assistente para saber em que parte da solução deveríamos implementar o semáforo e o mutex, sem que isso seja codificado diretamente em C. Solicitamos um pseudocódigo para nos auxiliar, como pode ser conferido no <a href="https://chatgpt.com/share/68068b4c-6860-800f-ab4a-b935b1e87c76">chat compartilhado</a>.
