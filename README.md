@@ -31,7 +31,7 @@ Três variáveis controlam o acesso ao banheiro e a impressão dos estados:
 <ul>
   <li><code>mtx</code> (mutex): protege o acesso concorrente a variáveis compartilhadas, como <code>banheiro_ocupado</code>, <code>sexo_atual</code>, o array <code>banheiro</code>, entre outras, garantindo que apenas uma thread por vez possa modificar esses estados compartilhados.</li>
   <li><code>Pessoa.cond</code>: atributo da estrutura Pessoa que, de acordo com o mutex, coloca a thread para dormir (caso esteja esperando a vez de usar o banheiro) ou acordar (caso seja a vez de usar o banheiro). 
-  <li><code>sem_estados</code> (semáforo): usado em torno das chamadas da função de impressão de visualização do estado do banheiro (<code>imprime_visualizacao()</code>), o que garante sua atomicidade e protege contra condições de corrida, evitando que a saída não fique embaralhada.</li>
+  <li><code>sem_estados</code> (semáforo): usado em torno das chamadas da função de impressão de visualização do estado do banheiro (<code>imprime_visualizacao()</code>), o que garante sua atomicidade e protege contra condições de corrida, evitando que a saída fique embaralhada.</li>
 </ul>
 
 Quando uma thread está dormindo, representa uma pessoa na fila esperando para entrar no banheiro. Quando a thread acorda, representa uma pessoa utilizando o banheiro. É importante notar que, quando uma thread termina sua execução, ou seja, uma pessoa deixou o banheiro, a mesma acorda a próxima thread que esteja na fila do mesmo gênero que o seu, indicando que é sua vez.
