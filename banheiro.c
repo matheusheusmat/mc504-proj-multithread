@@ -36,7 +36,6 @@ typedef struct
 } Pessoa;
 
 pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
-pthread_cond_t cond_banheiro = PTHREAD_COND_INITIALIZER;
 int banheiro_ocupado = 0;
 Sexo sexo_atual = LIVRE;
 int tempo_troca_ativo = 0;
