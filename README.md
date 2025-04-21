@@ -42,4 +42,6 @@ As macros <code>MAX_PESSOAS</code>, <code>TROCA_SEXO_TIMEOUT</code> e <code>CAPA
 ## Uso de LLMs 
 Usamos o Chat GPT como um "norteador" da solução, isto é, como um assistente para saber em que parte da solução deveríamos implementar o semáforo e o mutex, sem que isso seja codificado diretamente em C. Solicitamos um pseudocódigo para nos auxiliar, como pode ser conferido no <a href="https://chatgpt.com/share/68068b4c-6860-800f-ab4a-b935b1e87c76">chat compartilhado</a>.
 
+Além disso, foi solicitado auxílio na função de impressão, <code>imprimir_visualizacao()</code>, desta vez utilizando a LLM DeepSeek, de modo a melhorar a sua visualização via terminal. O código da função no arquivo final é basicamente o mesmo, com alguns ajustes de alinhamento feitos manualmente.
+
 ## Link do vídeo de apresentação
