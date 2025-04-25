@@ -45,3 +45,4 @@ Usamos o Chat GPT como um "norteador" da solução, isto é, como um assistente 
 Além disso, foi solicitado auxílio na função de impressão, <code>imprimir_visualizacao()</code>, desta vez utilizando a LLM DeepSeek, de modo a melhorar a sua visualização via terminal. O código da função no arquivo final é basicamente o mesmo, com alguns ajustes de alinhamento feitos manualmente.
 
 ## Link do vídeo de apresentação
+<a href=https://www.youtube.com/watch?v=Or-hS9PeT34>Banheiro Unissex - Projeto Multithread MC504 - Sistemas Operacionais (YouTube)</a>
